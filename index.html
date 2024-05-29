@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project_for_s.m.profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div id="heding"><h1>Double click Heat <br> and <br><span id="clic">Clik friend ,Click unfriend</span></h1></div>
+    <div class="pic">
+        <img  src="https://images.unsplash.com/photo-1524638431109-93d95c968f03?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <i class="ri-heart-3-fill"></i>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1545912452-8aea7e25a3d3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+       <div class="dtl">
+        <h3>Saina</h3>
+        <h5 id="frd">Friends</h5>
+        <button id="btn">Add friend</button>
+       </div>
+    </div>
+    <script>
+        var pic = document.querySelector(".pic")
+        var love = document.querySelector("i")
+            pic.addEventListener("dblclick",function(){
+            love.style.transform = "translate(-50%,-50%) scale(1)"
+       
+            setTimeout(function(){
+               
+            love.style.transform = "translate(-50%,-50%) scale(0)"
+            },3000)
+        })
+        var frd = document.querySelector("#frd" )
+        var btn = document.querySelector("#btn")
+        var x = 0
+         btn.addEventListener("click",function(){
+           if(x == 0){
+            frd.innerHTML = "friend"
+            frd.style.color = "red"
+            btn.innerHTML = "Remove"
+           btn.style.backgroundColor = "skyblue"
+            x = 1
+        }else{frd.innerHTML = "unfriend"
+               frd.style.color = "green"
+               btn.innerHTML = "Add Friend"
+               btn.style.backgroundColor = "pink"
+            x = 0
+
+        } 
+        
+        })
+
+    </script>
+</body>
+</html>
